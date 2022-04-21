@@ -1,0 +1,29 @@
+show databases;
+
+use employee;
+
+create table students(
+id int not null auto_increment primary key,
+name varchar(20) not null,
+age int,
+city varchar(20) not null);
+
+desc students;
+
+alter table students
+modify age int not null;
+
+alter table students
+add email varchar(20);
+
+alter table students
+drop column email;
+
+insert into students(id, name, age, city)
+values (1, "Rekha", 20, "Pune"),
+(2, "Parth", 22, "Mumbai"),
+(3, "Sanyu", 29, "Nashik"),
+(4, "Rishit", 20, "Solapur"),
+(5, "Sonali", 22, "Nagpur");
+
+select * from students;
